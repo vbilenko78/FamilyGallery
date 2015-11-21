@@ -69,7 +69,7 @@ private
 
   def require_owner
     if @gallery.nil? || @gallery.owner != current_member
-      raise "You don't have access to that shit mang"
+      raise "You don't have access to that shit man!"
 
     end
   end

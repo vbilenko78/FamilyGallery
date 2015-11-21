@@ -1,0 +1,17 @@
+
+<% if member_signed_in? %>
+<%= link_to 'Logout', destroy_member_session_path, class:"btn btn-default navbar-btn", method: :delete %>
+<%= link_to "Gelleries", galleries_path, class:"btn btn-default navbar-btn" %>
+<% else %>
+<%= link_to "Login", new_member_session_path, class:"btn btn-default navbar-btn" %>
+<% end %>
+
+
+
+
+<div class="jumbotron">
+
+  <h1>Family Album</h1>
+  <p>Family source for sharing pictures!</p>
+
+</div>
