@@ -57,7 +57,7 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def gallery_params
-    params.require(:gallery).permit(:name, :owner_id, :owner_type, :description)
+    params.require(:gallery).permit(:name, :owner_id, :owner_type, :description, :avatar)
   end
 
 end

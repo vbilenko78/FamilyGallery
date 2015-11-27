@@ -1,13 +1,26 @@
 
+<div id='album' class = 'transitions-enabled'>
+
+  <% @galleries.each do |gal| %>
+
+    <div class = "box">
+
+      <div class="panel panel-default">
+
+        <div class = "panel-body">
+          <%= link_to image_tag(gallery_card.avatar.url(:medium)), gallery_card %><br/>
+          <strong><%= gallery_card.description %><br/></strong>
+          <em><%= gallery_card.name if gallery_card.name %><br/></em>
+
+        </div>
 
 
+        <div class = "panel panel-footer">
+          <%= link_to 'Edit', edit_gallery_path(gal) %>
+          <%= link_to 'Destroy', gal, method: :delete, data: { confirm: 'Are you sure?' } %> <br/>
+        </div>
 
-<div class="gallery">
+      </div>
+    </div>
 
-</div>
-
-<div class="gallery-card">
-
-</div>
-
-<%= gallery_card.name %>
+  <% end %>

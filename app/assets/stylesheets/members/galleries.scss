@@ -1,3 +1,27 @@
 // Place all the styles related to the members/galleries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#album {
+  margin: 0 auto;
+}
+
+.box {
+  margin: 5px;
+  width: 214px;
+}
+
+.box img {
+  width: 100%;
+}
+
+.gallery {
+  float: right;
+  margin-right: 2%;
+}
+
+.gallery-card {
+  border: 1px solid #333;
+  width: 30%;
+  min-height: 200px;
+}
