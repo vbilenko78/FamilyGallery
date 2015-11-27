@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :members
   devise_for :admins
+
   resources :galleries
 
   root to: 'home#index'
