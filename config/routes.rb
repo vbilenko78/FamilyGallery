@@ -2,7 +2,11 @@ Rails.application.routes.draw do
   devise_for :members
   devise_for :admins
 
-  resources :galleries
+  resources :galleries do
+    resources :images, only: %i[new create]
+  end
+
+  resources :images, only: %i[index edit show update destroy]
 
   root to: 'home#index'
 

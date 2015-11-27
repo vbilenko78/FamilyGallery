@@ -1,9 +1,9 @@
+<%= render "menu" %>
 <p id="notice"><%= notice %></p>
-
-<%= link_to 'Main Page', root_path,class:"btn btn-default navbar-btn" %>
-<%= link_to 'Logout', destroy_member_session_path, class:"btn btn-default navbar-btn", method: :delete %>
-<%= link_to 'New Gallery', new_gallery_path,class:"btn btn-default navbar-btn" %>
 
 <h1>Listing Galleries</h1>
 
+<div id='album' class = 'transitions-enabled'>
   <%= render partial: 'gallery_card', collection: @galleries %>
+</div>
+
