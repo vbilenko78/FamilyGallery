@@ -21,7 +21,7 @@ class ImagesController < ApplicationController
     @image = gallery.images.new(image_params)
 
     if @image.save
-      redirect_to @image, notice: 'Image was successfully created.'
+      redirect_to @image.gallery, notice: 'Image was successfully created.'
     else
       render :new
     end
@@ -29,7 +29,7 @@ class ImagesController < ApplicationController
 
   def update
     if image.update(image_params)
-      redirect_to @image, notice: 'Image was successfully updated.'
+      redirect_to @image.gallery, notice: 'Image was successfully updated.'
     else
       render :edit
     end
@@ -52,6 +52,6 @@ private
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def image_params
-    params.require(:image).permit(:name, :description)
+    params.require(:image).permit(:name, :description, :file)
   end
 end

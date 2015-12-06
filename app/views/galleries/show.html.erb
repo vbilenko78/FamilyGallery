@@ -1,20 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @gallery.name %>
-</p>
+<div class="row">
 
-<p>
-  <strong>Owner:</strong>
-  <%= @gallery.owner.name %>
-</p>
+  <div class="col-md-12 cards">
+    <%= render partial: "/images/image", collection: @gallery.images, locals: { size: :medium } %>
 
-<p>
-  <%= image_tag @gallery.default_image.file.url(:medium) %><br/>
-  <strong>Description:</strong>
-  <%= @gallery.description %>
-</p>
-
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-<%= link_to 'Back', galleries_path %>
+    <%= render partial: "/images/new_image" %>
+  </div>
+</div>
