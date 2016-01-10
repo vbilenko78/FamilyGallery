@@ -9,10 +9,7 @@
  *= require bootstrap_and_overrides
 */
 .cards .gallery-image, .new-gallery-image{
-  width: 300px;
-  height: 237px;
-  border: 1px solid #999;
+min-height: 200px;
   margin: 0.2em;
-  font-size: 6em;
   float: left;
 }
