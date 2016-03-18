@@ -40,12 +40,8 @@ ActiveRecord::Schema.define(version: 20151204224326) do
     t.integer  "owner_id"
     t.string   "owner_type"
     t.text     "description"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
-    t.string   "avatar_file_name"
-    t.string   "avatar_content_type"
-    t.integer  "avatar_file_size"
-    t.datetime "avatar_updated_at"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "galleries", ["owner_type", "owner_id"], name: "index_galleries_on_owner_type_and_owner_id", using: :btree
@@ -84,7 +80,7 @@ ActiveRecord::Schema.define(version: 20151204224326) do
     t.integer  "invited_by_id"
     t.string   "invited_by_type"
     t.integer  "invitations_count",      default: 0
-    t.string   "name",                                null: false
+    t.string   "name"
   end
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true, using: :btree
