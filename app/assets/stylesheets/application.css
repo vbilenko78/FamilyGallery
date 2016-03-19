@@ -8,7 +8,7 @@
  *= require_tree .
  *= require bootstrap_and_overrides
 */
-.cards .gallery-image, .new-gallery-image{
+.cards .gallery-image .new-gallery-image{
 min-height: 200px;
   margin: 0.2em;
   float: left;
