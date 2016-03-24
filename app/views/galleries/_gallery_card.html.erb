@@ -6,13 +6,13 @@
       <%= link_to image_tag(gallery_card.default_image.file.url(:medium),
                             :class => "img-responsive"), gallery_card %><br/>
 
-      <strong><%= gallery_card.description %><br/></strong>
-      <em><%= gallery_card.name if gallery_card.name %><br/></em>
+                            <strong><%= gallery_card.description %><br/></strong>
+                            <em><%= gallery_card.name if gallery_card.name %><br/></em>
     </div>
 
-    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class="btn-group btn-group-justified" >
       <div class = "btn-group">
-        <%= link_to 'Edit', edit_gallery_path(gallery_card), :class => "btn btn-default" %>
+        <%= link_to 'Edit', edit_gallery_path(gallery_card), :class => "btn btn-info active" %>
       </div>
 
 
