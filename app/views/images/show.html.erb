@@ -1,10 +1,6 @@
-<p id="notice"><%= notice %></p>
+  <%= render partial: "image", object: @image, locals: { size: :large } %>
 
-<%= render partial: "image", object: @image, locals: { size: :large } %>
-<p>
-
-<p>
   <%= @image.description %>
-</p>
 
-<%= link_to 'Back to gallery' , @image.gallery %>
+  <%= link_to 'Back to gallery' , @image.gallery %>
+
