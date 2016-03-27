@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>FamilyGallery</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>FamilyGallery</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<% flash.each do |name, msg| %>
-  <%= content_tag(:div, msg, class: "alert alert-success") %>
-<% end %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag(:div, msg, class: "alert alert-success") %>
+    <% end %>
 
-<div class="container">
-  <%= render "menu" %>
-</div>
+    <div class="container">
+      <%= render "menu" %>
+    </div>
 
-<div class="container">
-  <%= yield %>
-</div>
+    <div class="container">
+      <%= yield %>
+    </div>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
-</body>
+  </body>
 </html>

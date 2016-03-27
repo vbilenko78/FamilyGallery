@@ -1,20 +1,29 @@
 <h2><%= t "devise.invitations.new.header" %></h2>
+<br>
 
 <%= form_for resource, :as => resource_name, :url => invitation_path(resource_name), :html => {:method => :post} do |f| %>
   <%= devise_error_messages! %>
 
   <% resource.class.invite_key_fields.each do |field| -%>
     <p><%= f.label field %><br />
-    <%= f.text_field field %></p>
+    <%= f.text_field field, :class =>"form-control" %></p>
   <% end -%>
 
-  <p><%= f.submit t("devise.invitations.new.submit_button") %></p>
+  <%= f.submit t("devise.invitations.new.submit_button"), :class => "btn btn-primary"  %>
 <% end %>
 
-<table>
+<br><br><br><br>
+
+ <h4>Pending Approvals</h4>
+
+<table class="table table-hover table table-striped">
   <% Member.invitation_not_accepted.each do |member| %>
     <tr>
       <td><%= member.email %></td>
+      <td><%= member.id %>
+      <td><%= link_to 'Re-send Invitation', resend_invitation_controller_resend_invite_path,
+        class:"btn btn-primary", method: :post %></td>
     </tr>
   <% end %>
 </table>
+
