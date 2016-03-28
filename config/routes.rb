@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
 
-  post 'resend_invitation_controller/resend_invite'
+  get 'members/invitation/invite_members/:id' => 'invites#resend', as: 'invite_member_id'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
