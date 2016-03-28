@@ -21,8 +21,8 @@
     <tr>
       <td><%= member.email %></td>
       <td><%= member.id %>
-      <td><%= link_to 'Re-send Invitation', invite_member_id_path(:id),
-        :class => "btn btn-primary" %></td>
+      <td><%= link_to 'Re-send Invitation', invite_member_id_path(member.id),
+        :class => "btn btn-default btn-xs" %></td>
     </tr>
   <% end %>
 </table>
