@@ -1,6 +1,8 @@
+<div class="container">
 <div class="col-sm-offset-2 col-sm-10">
   <h2>Log in</h2>
 </div>
+
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group">
@@ -10,16 +12,20 @@
     </div>
   </div>
 
-  <div class="col-sm-offset-2 col-sm-5">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-5">
+      <%= f.label :password %><br />
+      <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
+    </div>
   </div>
 
+  <div class="form-group">
   <div class="col-sm-offset-2 col-sm-5">
     <% if devise_mapping.rememberable? -%>
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     <% end -%>
+  </div>
   </div>
 
   <div class="col-sm-offset-2 col-sm-5">
@@ -31,3 +37,5 @@
   </div>
 
 <% end %>
+</div>
+</form>
