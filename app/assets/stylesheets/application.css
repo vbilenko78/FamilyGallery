@@ -8,8 +8,13 @@
  *= require_tree .
  *= require bootstrap_and_overrides
 */
+
+.devise_class {
+  @extend .bootstrap_class;
+}
+
 .cards .gallery-image .new-gallery-image{
-min-height: 200px;
+  min-height: 200px;
   margin: 0.2em;
   float: left;
 }
