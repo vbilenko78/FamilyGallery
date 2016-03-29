@@ -10,8 +10,6 @@ class ImagesController < ApplicationController
 
   def new
     @image = gallery.images.build
-  end
-
   def edit
     image
   end
