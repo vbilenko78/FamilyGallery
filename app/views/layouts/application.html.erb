@@ -5,7 +5,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body>
+
+  <body class="fimage">
 
     <% flash.each do |name, msg| %>
       <%= content_tag(:div, msg, class: "alert alert-success") %>
