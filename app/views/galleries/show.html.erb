@@ -2,7 +2,9 @@
 
   <div class="row">
     <%= render partial: "/images/image", collection: @gallery.images, locals: { size: :medium } %>
+    <%= render partial: "/images/new_image" %>
   </div>
+
 
   <%= link_to "Add Image", new_gallery_image_path(params[:id]), class:"btn btn-primary btn-block active" %>
 
