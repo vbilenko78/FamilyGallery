@@ -19,15 +19,16 @@
   float: left;
 }
 
-fimage{
-  background-image: linear-gradient(rgba(255,255,255,0.9), rgba(0,0,0,0.2)), url(451.JPG);
+/*
+.fimage{
+  background-image: url(451.JPG);
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
 
 #jumbo {
-  /* all other browsers */
   background: rgba(255,255,255, 0.5);
 }
+*/
 
