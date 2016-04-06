@@ -13,11 +13,10 @@
     <% end %>
 
     <div class="container">
-      <%= render "menu" %>
-    </div>
 
-    <div class="container">
+      <%= render "menu" %>
       <%= yield %>
+
     </div>
 
     <%= javascript_include_tag 'application'%>

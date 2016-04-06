@@ -19,16 +19,15 @@
   float: left;
 }
 
-/*
 .fimage{
-  background-image: url(451.JPG);
-  background-size: cover;
   background-position: center;
-  height: 100vh;
 }
 
 #jumbo {
-  background: rgba(255,255,255, 0.5);
+  background-image: url(45.JPG);
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
-*/
+
 

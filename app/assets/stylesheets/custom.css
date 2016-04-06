@@ -1,0 +1,13 @@
+#jumbo {
+  background-image: url(45.JPG);
+  height: 80vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.jumbotron h1 {
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+
